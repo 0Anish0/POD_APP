@@ -9,19 +9,21 @@ import {
     ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigation = useNavigation(); // Hook to access navigation
 
     const handleLogin = () => {
-        // Here, you would usually handle authentication logic
-        // For this example, we'll just show an alert
-        if (username === '' || password === '') {
+        // Validate the input
+        if (username.trim() === '' || password.trim() === '') {
             Alert.alert('Error', 'Please fill in all fields');
         } else {
+            // Simulate successful login
             Alert.alert('Success', `Logged in as ${username}`);
-            // Add your login logic here (e.g., API call)
+            navigation.navigate('Home'); // Navigate to Home screen on success
         }
     };
 
