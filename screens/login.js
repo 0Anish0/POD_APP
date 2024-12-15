@@ -23,7 +23,7 @@ const LoginScreen = () => {
         } else {
             // Simulate successful login
             Alert.alert('Success', `Logged in as ${username}`);
-            navigation.navigate('Home'); // Navigate to Home screen on success
+            navigation.navigate('Main'); // Navigate to Home screen on success
         }
     };
 

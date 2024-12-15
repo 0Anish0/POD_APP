@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, ImageBackground, Text, StyleSheet } from 'react-native';
 
-const SplashScreen = ({ navigation }) => {
+const WelcomeScreen = ({ navigation }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigation.replace('Login');
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SplashScreen;
+export default WelcomeScreen;

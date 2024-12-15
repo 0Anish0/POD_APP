@@ -7,7 +7,7 @@ import { GOOGLE_MAPS_APIKEY } from '@env';
 import styles from '../styles/GenerateBarcodeStyle.js';
 import API_BASE_URL from '../config/config.js';
 
-export default function GenerateQRCodeScreen() {
+export default function GenerateQrCode() {
     const [recipientName, setRecipientName] = useState('');
     const [recipientAddress, setRecipientAddress] = useState('');
     const [shipmentAddress, setShipmentAddress] = useState('');

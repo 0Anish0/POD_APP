@@ -1,12 +1,12 @@
 import React, { useEffect, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
-import QRCodeScanner from 'react-native-qrcode-scanner';
-import { RNCamera } from 'react-native-camera';
+// import QRCodeScanner from 'react-native-qrcode-scanner';
+// import { RNCamera } from 'react-native-camera';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, Easing } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function ScanBarcodeScreen() {
+export default function ScanQrCode() {
     const [scannedText, setScannedText] = React.useState(null);
     const [isScannerActive, setIsScannerActive] = React.useState(false);
     const translateY = useSharedValue(0);

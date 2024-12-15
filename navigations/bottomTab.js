@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import GenerateBarcodeScreen from '../screens/GenerateBarcodeScreen';
-import ScanBarcodeScreen from '../screens/ScanBarcodeScreen';
-import ShowBarcodeScreen from '../screens/ShowBarcodeScreen';
+import GenerateQrCode from '../screens/generateQrCode';
+import ScanQrCode from '../screens/scanQrCode';
+import showQrCode from '../screens/showQrCode';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,12 +22,12 @@ const BottomTabNavigator = () => {
             }}
         >
             <Tab.Screen
-                name="Generate Barcode"
-                component={GenerateBarcodeScreen}
+                name="Generate QR Code"
+                component={GenerateQrCode}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Ionicons
-                            name="barcode"
+                            name="QrCode"
                             size={24}
                             color={focused ? '#007aff' : '#ccc'}
                         />
@@ -35,8 +35,8 @@ const BottomTabNavigator = () => {
                 }}
             />
             <Tab.Screen
-                name="Scan Barcode"
-                component={ScanBarcodeScreen}
+                name="Scan QR Code"
+                component={ScanQrCode}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Ionicons
@@ -48,8 +48,8 @@ const BottomTabNavigator = () => {
                 }}
             />
             <Tab.Screen
-                name="Show Barcode"
-                component={ShowBarcodeScreen}
+                name="Show QR Code"
+                component={showQrCode}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Ionicons
